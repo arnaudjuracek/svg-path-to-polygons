@@ -44,8 +44,7 @@ function svgPathToPolygons(svgPathString, opts={}) {
 			break;
 
 			default:
-				console.error('Our deepest apologies, but '+cmd.command+' commands ('+cmd.code+') are not yet supported.');
-				process.exit(2);
+				throw new Error('Our deepest apologies, but '+cmd.command+' commands ('+cmd.code+') are not yet supported.');
 		}
 		prev = cmd;
 	});
